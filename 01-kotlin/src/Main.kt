@@ -1,3 +1,5 @@
+import java.util.*
+
 fun main(args:Array<String>){
     println("Hola mundo")
 
@@ -49,6 +51,103 @@ fun main(args:Array<String>){
     estaJalado(10.0)
 
 
+    holaMundo("people equal shit")
+
+    var aux=sumar(2.4,6.5)
+    println(aux)
+
+
+    val arregloCumpleanos:Array<Int> = arrayOf(1,2,3,4)
+    val arregloCumpleanos2:Array<Any> = arrayOf(1,"Alv",10.2,true)
+
+    arregloCumpleanos[0]=5
+    arregloCumpleanos.set(0,5)
+    //en el caso de los arreglos inmutables se puede cambiar valores por seperados pero no toda la instancia del mismo
+
+    val fecha=Date()
+    fecha.time=11231231
+    fecha.year=2000
+
+
+    val notas= arrayListOf<Int>(1,2,3,4,5,6,7)
+    println("Notas: ")
+    notas.forEach {
+
+        println(it)
+    }
+
+    println("Notas: ")
+    notas.forEach { nota: Int ->
+        println(nota)
+    }
+
+    println("Notas indexadas: ")
+    notas.forEachIndexed { index, i ->
+
+        println("Index: $index Nota: $i ")
+    }
+
+
+    notas.forEachIndexed { index, i ->
+        notas[index]+=1
+    }
+
+    //operador map , itera y modifica el arreglo
+
+
+
+
+
+
+
+    //aplicar una funcion dentro del map
+
+
+
+    notas.map { nota->
+        nota+1
+    }
+
+
+    notas.forEachIndexed { index, i ->
+
+        println("Index: $index Nota: $i ")
+    }
+
+
+    val notas2=notas.map { nota->
+        if(nota%2==0){
+            nota+2
+        }else{
+            nota+1
+        }
+    }
+
+    println("--------")
+    notas2.forEachIndexed { index, i ->
+
+        println("Index: $index Nota: $i ")
+    }
+
+
+    val notas3=notas.map { nota->
+        var modulo=nota%2
+        var espar=0
+        when(modulo){
+            espar->{
+                nota+5
+            }
+            else->{
+                nota+10
+            }
+        }
+
+    }
+
+    notas3.forEach { it->
+        println(it)
+    }
+
 
 }
 
@@ -67,4 +166,17 @@ fun estaJalado(nota:Double){ //el tipo de retorno cuando no se devuelve nada es 
 
         }
     }
+}
+
+
+
+fun holaMundo(mensaje:Any):Unit{
+    println("Mensaje $mensaje")
+}
+
+
+fun sumar(num1:Double,num2:Double):Double{
+
+    return num1+num2
+
 }
