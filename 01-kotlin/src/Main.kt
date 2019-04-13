@@ -149,6 +149,41 @@ fun main(args:Array<String>){
     }
 
 
+     val respuestaFilter = notas
+        .filter {
+            // Filtra el arreglo
+            it in 3..4
+            // it > 2 && it < 5
+        }
+        .map {
+            // Mutar o Cambiar el arreglo
+            it * 2
+        }
+
+    respuestaFilter.forEach { println(it) }
+
+    val novias = arrayListOf(1, 2, 2, 3, 4, 5)
+
+    val respuestaNovia: Boolean = novias.any {
+        it == 7
+    }
+
+    println(respuestaNovia) // true
+    println(respuestaNovia) // false
+
+    val tazos = arrayListOf(1,2,3,4,5,6,7)
+
+    val respuestaTazos = tazos.all {
+        it > 1
+    }
+
+    println(respuestaTazos) // falso
+
+    val totalTazos = tazos.reduce { valorAcumulado, tazo ->
+        valorAcumulado + tazo
+    }
+    println(totalTazos)
+
 
     
 
