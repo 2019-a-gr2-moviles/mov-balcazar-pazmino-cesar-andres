@@ -186,7 +186,7 @@ fun main(args:Array<String>){
 
 
     
-
+activarusuario();
 
 
 }
@@ -218,5 +218,116 @@ fun holaMundo(mensaje:Any):Unit{
 fun sumar(num1:Double,num2:Double):Double{
 
     return num1+num2
+
+}
+
+
+//clases
+//
+class Usuario{
+    public var nombre:String ="";
+    public var apellido:String=""
+
+    constructor(bombre:String,apelido:String){
+        this.apellido=apellido;
+        println("2do constructor")
+    }
+//el bloque INIT se comporta como 1er constructor
+ init {
+     println("bloque init")
+    //aqui solo se tiene acceso a los atributos del 1er constructor
+ }
+
+}
+
+fun activarusuario(){
+    var usr=Usuario("cesar","balcazar")
+
+}
+
+class UsuarioKT(public var nombre:String,public var apellido: String, private var id:String){  //en kotlin sí se puede declara el constructor en la clase   //por defecto todas las propiedades en kotlin son publicas //1er constructor
+    fun hola():String{  //public y unit es por default
+        return "hola"
+    }
+    fun funcion2(){
+        var a:Int=10;
+        var b:Int=50;
+        var c=100;
+
+        var r=a+b+c;
+    }
+
+
+
+
+
+    //para crear algo estatico
+
+    companion object { //se podrian para usar PARA LOS PROYECTOS , EJEMPLO TODOS LOS METODOS PARA INSERT, UPDATE, DELETE, etc.
+        val gravedad=10.5;
+        fun correr(){
+            println("Estoy corriendo en $gravedad");
+        }
+    }
+
+}
+
+
+fun ejemplo(){
+    UsuarioKT.correr();//llmada a un método estático
+    UsuarioKT.gravedad//propiedad estatica
+}
+
+fun a(){
+    var usuario=UsuarioKT("Cesar","Balcazar","1");
+
+    usuario.nombre="cambio de nombre";
+   // usuario.nombre="Cambio de nombre";
+    //los gets and sets se crean por default
+}
+
+
+class A{
+
+}
+
+//A.correr() ->metodo estatico
+//A.atributo ->atributo estatico
+
+
+
+//una clase abstracta es la que no se puede instanciar
+//se añade "abstract" antes de calss
+
+open class Numero(var entero:Int, var entero2:Int){//por defecto todas las clases en kotlin son final, si no queremos les ponemos OPEN //cuando se le pone var o val en el 1er constructor se asumen como propiedades //solo las clases OPEN se pueden heredar
+
+}
+//HERENCIA
+class Suma(num1:Int,num2:Int):Numero(num1,num2){
+
+}
+
+fun cc(){
+    var suma=Suma(1,2);
+
+
+}
+
+
+//lo mas bacan de KOTLIN
+fun presley(requerido:Int,opcional:Int=1,nulo:Int?){ //Int?->a veces va ser nulo
+if(nulo!=null){
+
+}
+  //  val nombresito:String?=nulo?.nombre.toString();//a veces es nulo y a veces es string: ELVIS OPERATOR
+
+
+
+}
+
+
+fun ej(){
+    presley(1,nulo=0)//el opcional esta implicito  //Named Parameters
+    presley(1,1,null);
 
 }
