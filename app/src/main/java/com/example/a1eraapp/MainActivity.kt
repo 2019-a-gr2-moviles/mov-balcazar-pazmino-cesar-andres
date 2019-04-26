@@ -5,7 +5,7 @@ import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) { //para trabajar en el ciclo de vida de la activity
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
