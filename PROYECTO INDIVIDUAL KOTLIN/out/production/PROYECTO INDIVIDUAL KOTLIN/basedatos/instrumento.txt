@@ -1,0 +1,4 @@
+Guitarra,Negra con blanco,Fender,950
+Piano,Blanco,Yamaha,1000
+Guitarra,Negra con blanco,Fender,950
+Piano,Blanco,Yamaha,1000
