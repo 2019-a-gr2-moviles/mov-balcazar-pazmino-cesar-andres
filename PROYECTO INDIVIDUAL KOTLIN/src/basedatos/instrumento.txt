@@ -1,5 +1,2 @@
-Guitarra,Negra con blanco,Fender,950
-Piano,Blanco,Yamaha,1000
-Guitarra,Negra con blanco,Fender,950
-Piano,Blanco,Yamaha,1000
-Bajo,Jazz Bazz Negro,Gibson,500.5
+11,Piano,Blanco con negro,Yamaha,500.0
+12,Guitarra,Acustica,Yamaha,150.8

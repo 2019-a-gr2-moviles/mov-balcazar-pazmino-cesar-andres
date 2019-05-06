@@ -30,7 +30,7 @@ class IOarchivos {
     public fun leerArchivoObjeto(nombreArchivo: String):Any{
         var o:Any;
 
-        var fis=FileInputStream("src/basedatos/"+nombreArchivo+".lista");
+        var fis=FileInputStream("src/basedatos/"+nombreArchivo);
         var ois=ObjectInputStream(fis);
         o=ois.readObject();
         ois.close();
@@ -63,6 +63,41 @@ class IOarchivos {
         }
 
 
+    }
+
+
+    public fun escribirArchivoIndex():Number{
+        var bw:BufferedWriter;
+        var fw:FileWriter;
+
+        var file:File= File("src/basedatos/index.txt");
+        var i=0;
+        var bandera=file.exists();
+        if(!bandera){
+            file.createNewFile();
+        }
+
+        fw= FileWriter(file.absoluteFile,true);
+        bw= BufferedWriter(fw);
+        if(!bandera){
+            bw.write(i.toString()+"\n");
+        }else{
+            var aux=readFileAsLinesUsingUseLines("src/basedatos/index.txt");
+            var aux2= aux.get(aux.size-1).toString().toInt();
+            i=aux2+1;
+            bw.write(i.toString()+"\n")
+        }
+
+
+        if (bw != null){
+            bw.close();
+        }
+
+        if (fw != null){
+            fw.close();
+        }
+
+        return i;
     }
 
 
@@ -100,4 +135,47 @@ class IOarchivos {
 
     fun readFileAsLinesUsingUseLines(fileName: String): List<String>
             = File(fileName).useLines { it.toList() }
+
+
+    fun eliminarTuplaArchivo(index:Number){
+        var listaAux=readFileAsLinesUsingUseLines("src/basedatos/instrumento.txt");
+
+        var file = File("src/basedatos/instrumento.txt");
+
+        if(file.exists()){
+            file.delete();
+
+            listaAux.forEach {
+                var aux=it.split(',');
+                if(aux[0]!=index.toString()){
+                    escribirArchivo(it,"instrumento.txt")
+                }
+            }
+        }else{
+            JOptionPane.showMessageDialog(null,"ATENCIÓN: No existe algún registro que borrar!");
+        }
+    }
+
+
+    fun actualizarTuplaArchivo(ins:String){
+        var listaAux=readFileAsLinesUsingUseLines("src/basedatos/instrumento.txt");
+        var indexaux=ins.split(',');
+        var file = File("src/basedatos/instrumento.txt");
+
+        if(file.exists()){
+            file.delete();
+
+            listaAux.forEach {
+                var aux=it.split(',');
+                if(aux[0]==indexaux[0]){
+                    escribirArchivo(ins,"instrumento.txt");
+                }else{
+                    escribirArchivo(it,"instrumento.txt");
+
+                }
+            }
+        }else{
+            JOptionPane.showMessageDialog(null,"ATENCIÓN: No existe algún registro que borrar!");
+        }
+    }
 }

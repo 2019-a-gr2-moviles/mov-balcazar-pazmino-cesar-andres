@@ -1,10 +1,4 @@
-import javax.swing.JOptionPane;
-import Controlador.IOarchivos;
-import Modelo.Instrumento;
-import  Vista.VistaInical;
-import Vista.VistaPrincipal
 import java.awt.Dimension
-import java.awt.EventQueue;
 import javax.swing.JFrame
 
 //fun main(){
@@ -57,7 +51,7 @@ import javax.swing.JFrame
 //@JvmStatic
 fun main(args: Array<String>) {
     val ventana = JFrame("Catálogo Instrumentos Musicales")
-    ventana.contentPane = VistaPrincipal().panel
+
     ventana.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
     ventana.preferredSize = Dimension(400, 300)
     ventana.pack()
