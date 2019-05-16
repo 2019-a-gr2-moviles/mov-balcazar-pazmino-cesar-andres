@@ -52,7 +52,7 @@ class IOarchivos {
         bw= BufferedWriter(fw);
 
         bw.write(tupla+"\n");
-        JOptionPane.showMessageDialog(null,"Registro exitoso!");
+        //JOptionPane.showMessageDialog(null,"Registro exitoso!");
 
         if (bw != null){
             bw.close();
