@@ -1,2 +1,4 @@
 11,Piano,Blanco con negro,Yamaha,500.0
 12,Guitarra,Acustica,Yamaha,150.8
+13,Guitarra,Negra con blanco,Fender,500.0
+15,Guitarra,blanca,fender,500.0
