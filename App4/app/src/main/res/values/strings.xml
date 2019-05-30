@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">App4</string>
+    <string name="title_activity_list_view">ListViewActivity</string>
+    <string name="title_activity_lv">LVA</string>
 </resources>
