@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Appex</string>
+    <string name="title_activity_gestion_lista_so">Appex</string>
+    <string name="login_entrar">LogIn</string>
+    <string name="gestionso">Manage OS</string>
+    <string name="crearso">Create OS</string>
+    <string name="btn_guardarso">Save</string>
+    <string name="instalado">Instaled</string>
+    <string name="nombreso_input">Name</string>
+    <string name="apiso_input">API version</string>
+    <string name="fechaso_input">Release date</string>
+    <string name="pesoso_input">Weigth</string>
+    <string name="btn_eliminarso">Delete</string>
+    <string name="btn_actualizarso">Update</string>
+    <string name="btn_gestionihjos">Manage Apps</string>
+    <string name="btn_crearhijo">Create Apps</string>
+    <string name="apppeso_input">Weigth(Gbs)</string>
+    <string name="appversion_input">API version</string>
+    <string name="appnombre_input">Name</string>
+    <string name="appurl_input">Download URL</string>
+    <string name="appfecha_input">Release date</string>
+    <string name="appcosto_input">Price</string>
+    <string name="app_guardardatos">Save</string>
+    <string name="app_btn_eliminar">Delete</string>
+    <string name="app_btn_actualizar">Update</string>
+    <string name="usuario">User</string>
+    <string name="aux">Name</string>
+</resources>
