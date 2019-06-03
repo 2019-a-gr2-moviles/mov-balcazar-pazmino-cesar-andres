@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Examen</string>
+    <string name="title_activity_gestion_lista_so">GestionListaSO</string>
+    <string name="login_entrar">Entrar</string>
+    <string name="usuario">Usuario</string>
+
+    //activity gestionso
+    <string name="gestionso">Gestionar SOs</string>
+    <string name="crearso">Crear SO</string>
+
+    //activity crearso
+
+    <string name="btn_guardarso">Guardar</string>
+    <string name="instalado">Instalado</string>
+    <string name="nombreso_input">Nombre</string>
+    <string name="apiso_input">Version API</string>
+    <string name="fechaso_input">Fecha lanzamiento</string>
+    <string name="pesoso_input">Peso</string>
+
+
+    //activity gestionindividualso
+
+    <string name="btn_eliminarso">Eliminar</string>
+    <string name="btn_actualizarso">Actualizar</string>
+    <string name="btn_gestionihjos">Gestionar Apps</string>
+    <string name="btn_crearhijo">Crear App</string>
+
+
+    //activity crearhijo
+
+    <string name="apppeso_input">Peso(Gigas)</string>
+    <string name="appversion_input">Version API</string>
+    <string name="appnombre_input">Nombre</string>
+    <string name="appurl_input">URL descarga</string>
+    <string name="appfecha_input">Fecha lanzamiento</string>
+    <string name="appcosto_input">Costo</string>
+    <string name="app_guardardatos">Guardar</string>
+
+    //activity gestionindividualapp
+    <string name="app_btn_eliminar">Eliminar</string>
+    <string name="app_btn_actualizar">Actualizar</string>
+
+
+    //aux
+
+    <string name="aux">Nombre</string>
+</resources>
