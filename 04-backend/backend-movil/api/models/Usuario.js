@@ -49,7 +49,13 @@ module.exports = {
     correo: {
       type: 'string',
       isEmail: true
-    }
+    },
+
+    //CONFIGURACION DEL PAPA
+    serviciosDeUsuario:{
+      collection:'servicio', //nombre del modelo a relacionar
+      via:'fkUsuario' //nombre del atributo
+  }
 
 
   },
