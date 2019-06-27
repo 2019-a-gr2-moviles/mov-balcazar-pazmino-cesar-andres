@@ -28,6 +28,9 @@ class MainActivity : AppCompatActivity() {
         btn_intent_respuesta.setOnClickListener {
             irAIntentRespuesta()
         }
+        button.setOnClickListener {
+            irAhttp();
+        }
     }
 
 
@@ -56,6 +59,14 @@ class MainActivity : AppCompatActivity() {
         startActivity(intentExplicito)
     }
 
+
+    fun irAhttp(){
+        val intentExplicito = Intent(
+            this,
+            ConexionHTTP::class.java
+        )
+        startActivity(intentExplicito)
+    }
     fun irAListView(){
         val intentExplicito = Intent(
             this,

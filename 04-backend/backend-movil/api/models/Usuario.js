@@ -13,12 +13,16 @@ module.exports = {
     },
     nombre: {
       type: 'string',
-      required: true
+      required: true,
+      minLength: 3,
+      maxLength: 60,
     },
     cedula: {
       type: 'string',
       required: true,
-      unique: true
+      unique: true,
+      minLength: 10,
+      maxLength: 25,
     },
     username: {
       type: 'string',
@@ -30,6 +34,8 @@ module.exports = {
     },
     sueldo: {
       type: 'number',
+      min: 100.00,
+      max: 5000,
       defaultsTo: 100.00
     },
     estaCasado: {
@@ -50,15 +56,18 @@ module.exports = {
       type: 'string',
       isEmail: true
     },
+    // CONFIGURACION DEL PAPA
+    serviciosDeUsuario: { // Nombre atributo de la relacion
+      collection: 'servicio', // Nombre del modelo a relacionar
+      via: 'fkUsuario'  // Nombre atributo FK del otro modelo
+    },
 
-    //CONFIGURACION DEL PAPA
-    serviciosDeUsuario:{
-      collection:'servicio', //nombre del modelo a relacionar
-      via:'fkUsuario' //nombre del atributo
-  }
-
-
+    fkEmpresa: {  // Nombre del FK para la relacion
+      model: 'empresa', // Nombre del modelo a relacionar (papa)
+      // required: true // OPCIONAL -> Siempre ingresar el FK
+    },
   },
+  // 
 
 };
 
