@@ -1,8 +1,8 @@
 package com.example.myapplication
 
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity;
+import com.google.android.material.snackbar.Snackbar
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log
 import com.beust.klaxon.Klaxon
 
@@ -11,6 +11,7 @@ import java.lang.Exception
 import java.util.*
 import com.github.kittinunf.result.Result.*
 import com.github.kittinunf.fuel.httpGet
+import com.github.kittinunf.fuel.httpPost
 
 class ConexionHTTP : AppCompatActivity() {
 
@@ -87,7 +88,7 @@ class ConexionHTTP : AppCompatActivity() {
         }
 
 
-        val url = "http://192.168.80.1:1337/empresa/1";
+        /*val url = "http://192.168.80.1:1337/empresa/1";
 
         url
             .httpGet()
@@ -107,6 +108,36 @@ class ConexionHTTP : AppCompatActivity() {
                             Log.i("http", "${empresaParsead.nombre}");
                         }
                     }
+                }
+
+            }*/
+
+        val urlCrearEmpresa="http//172.31.104.78/empresa";
+
+        val parametrosCrearEmpresa= listOf( //lista de pares
+            "nombre" to "Cesar", //este sirve
+            "apellido" to "Balcazar",
+            "sueldo" to 2000,
+            "casado" to false,
+            "hijos" to null
+        )
+
+
+        urlCrearEmpresa
+            .httpPost(parametrosCrearEmpresa)
+            .responseString { request, response, result ->
+                when(result){
+
+                    is Failure->{
+
+                    }
+
+                    is Success->{
+                        val empresaString= result.get();
+
+                        Log.i("http","${empresaString}");
+                    }
+
                 }
 
             }
