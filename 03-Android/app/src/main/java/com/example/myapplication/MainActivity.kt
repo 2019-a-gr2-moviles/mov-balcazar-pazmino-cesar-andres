@@ -1,7 +1,7 @@
 package com.example.myapplication
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_parcelable.*
@@ -30,6 +30,10 @@ class MainActivity : AppCompatActivity() {
         }
         button.setOnClickListener {
             irAhttp();
+        }
+
+        button2.setOnClickListener {
+            irALMapa();
         }
     }
 
@@ -71,6 +75,15 @@ class MainActivity : AppCompatActivity() {
         val intentExplicito = Intent(
             this,
             ListViewActivity::class.java
+        )
+        startActivity(intentExplicito)
+    }
+
+
+    fun irALMapa(){
+        val intentExplicito = Intent(
+            this,
+           MapsActivity::class.java
         )
         startActivity(intentExplicito)
     }
