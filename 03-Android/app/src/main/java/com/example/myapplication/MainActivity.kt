@@ -35,6 +35,9 @@ class MainActivity : AppCompatActivity() {
         button2.setOnClickListener {
             irALMapa();
         }
+        button3.setOnClickListener {
+            irACicloVida();
+        }
     }
 
 
@@ -84,6 +87,14 @@ class MainActivity : AppCompatActivity() {
         val intentExplicito = Intent(
             this,
            MapsActivity::class.java
+        )
+        startActivity(intentExplicito)
+    }
+
+    fun irACicloVida(){
+        val intentExplicito = Intent(
+            this,
+            CicloVidaActivity::class.java
         )
         startActivity(intentExplicito)
     }
