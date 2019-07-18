@@ -7,4 +7,46 @@
         android:layout_height="match_parent"
         tools:context=".FragmentosActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintfragmentos"
+            android:layout_width="281dp"
+            android:layout_height="449dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginEnd="10dp" android:layout_marginRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="60dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.508"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/btn_f_2"
+            app:layout_constraintVertical_bias="0.828">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+            android:text="1ero"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_f_1"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="96dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="48dp" android:layout_marginStart="48dp"/>
+    <Button
+            android:text="2do"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_f_2" app:layout_constraintTop_toTopOf="@+id/btn_f_1"
+            android:layout_marginTop="96dp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/btn_f_1" app:layout_constraintStart_toEndOf="@+id/btn_f_1"
+            android:layout_marginLeft="24dp" android:layout_marginStart="24dp"
+            app:layout_constraintVertical_bias="1.0"/>
+    <Button
+            android:text="3ero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_f_3" app:layout_constraintTop_toTopOf="@+id/btn_f_2"
+            android:layout_marginTop="87dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="35dp" android:layout_marginRight="35dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_f_2" app:layout_constraintStart_toEndOf="@+id/btn_f_2"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0.593" app:layout_constraintVertical_bias="1.0"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

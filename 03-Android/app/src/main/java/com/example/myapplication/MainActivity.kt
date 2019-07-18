@@ -38,6 +38,10 @@ class MainActivity : AppCompatActivity() {
         button3.setOnClickListener {
             irACicloVida();
         }
+
+        btn_activityFragmentos.setOnClickListener {
+            irAActivityFragmentos()
+        }
     }
 
 
@@ -99,6 +103,14 @@ class MainActivity : AppCompatActivity() {
         startActivity(intentExplicito)
     }
 
+
+    fun irAActivityFragmentos(){
+        val intentExplicito = Intent(
+            this,
+            FragmentosActivity::class.java
+        )
+        startActivity(intentExplicito)
+    }
 
     fun irAParcelable(){
         val intentExplicito = Intent(
